@@ -1,0 +1,25 @@
+kubectl run redis --image=redislabs/redisgraph --port=6379
+
+kubectl exec -it redis-67697bdbf8-f8h9v -- /bin/bash
+redis-cli -h 192.168.99.100 -p 6379
+
+python bulk_insert.py GRAPH_DEMO -n data/nodes.csv -r data/edges.csv
+
+
+GRAPH.QUERY GRAPH_DEMO "MATCH (r:nodes)-[:edges]->(t:nodes {Label:'Joffrey Baratheon'}) RETURN r"
+
+
+kubectl create -f C:\Users\hando\OneDrive\Desktop\Midterm\redis-graph-deployment.yaml --record
+
+python bulk_insert_1.py GRAPH_DEMO -n data/nodesb1.csv -r data/edgesb1.csv
+
+python bulk_insert_2.py GRAPH_DEMO -n data/nodesb2.csv -r data/edgesb2.csv
+
+python bulk_insert_3.py GRAPH_DEMO -n data/nodesb3.csv -r data/edgesb3.csv
+
+python bulk_insert_4.py GRAPH_DEMO -n data/nodesb4.csv -r data/edgesb4.csv
+
+python bulk_insert_5.py GRAPH_DEMO -n data/nodesb5.csv -r data/edgesb5.csv
+
+
+python bulk_insert_6.py GRAPH_DEMO -n data/nodesb6.csv -r data/edgesb6.csv

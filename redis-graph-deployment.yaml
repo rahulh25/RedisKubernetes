@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redisgraph
+spec:
+  selector:
+    matchLabels:
+      app: redisgraph
+  replicas: 6 # tells deployment to run 1 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: redisgraph
+    spec:
+      containers:
+      - name: redisgraph
+        image: redislabs/redisgraph
+        ports:
+        - containerPort: 80
