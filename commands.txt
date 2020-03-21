@@ -1,11 +1,9 @@
-
+//Command to run redis-cli on local after running the docker image
+redis-cli -h 192.168.99.100 -p 6379
+//Run docker redis image on kubernetes
 kubectl run redis --image=redislabs/redisgraph --port=6379
 
-kubectl exec -it redis-67697bdbf8-f8h9v -- /bin/bash
-redis-cli -h 192.168.99.100 -p 6379
-
-GRAPH.QUERY GRAPH_DEMO "MATCH (r:nodes)-[:edges]->(t:nodes {Label:'Joffrey Baratheon'}) RETURN r"
-
+//Load the graph data to kubernetes pods
 python bulk_insert_1.py GRAPH_1 -n data/nodesb1.csv -r data/edgesb1.csv
 
 python bulk_insert_2.py GRAPH_2 -n data/nodesb2.csv -r data/edgesb2.csv
