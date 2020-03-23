@@ -4,14 +4,14 @@ redis-cli -h 192.168.99.100 -p 6379
 kubectl run redis --image=redislabs/redisgraph --port=6379
 
 //Load the graph data to kubernetes pods
-python bulk_insert_1.py GRAPH_1 -n data/nodesb1.csv -r data/edgesb1.csv
+python bulk_insert_1.py GRAPH_ONE -n data/nodesb1.csv -r data/edgesb1.csv
 
-python bulk_insert_2.py GRAPH_2 -n data/nodesb2.csv -r data/edgesb2.csv
+python bulk_insert_2.py GRAPH_TWO -n data/nodesb2.csv -r data/edgesb2.csv
 
-python bulk_insert_3.py GRAPH_3 -n data/nodesb3.csv -r data/edgesb3.csv
+python bulk_insert_3.py GRAPH_THREE -n data/nodesb3.csv -r data/edgesb3.csv
 
-python bulk_insert_4.py GRAPH_4 -n data/nodesb4.csv -r data/edgesb4.csv
+python bulk_insert_4.py GRAPH_FOUR -n data/nodesb4.csv -r data/edgesb4.csv
 
-python bulk_insert_5.py GRAPH_5 -n data/nodesb5.csv -r data/edgesb5.csv
+python bulk_insert_5.py GRAPH_FIVE -n data/nodesb5.csv -r data/edgesb5.csv
 
-python bulk_insert_6.py GRAPH_45 -n data/nodesb45.csv -r data/edgesb45.csv
+python bulk_insert_6.py GRAPH_SIX -n data/nodesb45.csv -r data/edgesb45.csv

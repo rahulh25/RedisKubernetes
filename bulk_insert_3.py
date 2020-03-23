@@ -316,8 +316,8 @@ def process_entity_csvs(cls, csvs):
 @click.command()
 @click.argument('graph')
 # Redis server connection settings
-@click.option('--host', '-h', default='192.168.99.107', help='Redis server host')
-@click.option('--port', '-p', default=31682, help='Redis server port')
+@click.option('--host', '-h', default='192.168.99.108', help='Redis server host')
+@click.option('--port', '-p', default=32124, help='Redis server port')
 @click.option('--password', '-a', default=None, help='Redis server password')
 # CSV file paths
 @click.option('--nodes', '-n', required=True, multiple=True, help='Path to node csv file')
