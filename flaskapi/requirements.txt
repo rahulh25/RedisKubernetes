@@ -1,7 +1,7 @@
 blinker==1.4
 certifi==2019.11.28
 click==7.1.1
-Django==2.2.10
+Django==2.2.27
 Faker==4.0.0
 Flask==1.1.1
 Flask-JWT-Extended==3.24.1
